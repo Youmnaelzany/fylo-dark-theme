@@ -16,7 +16,7 @@ const testimonial = [
     jobTitle: "Founder & CEO, Huddle",
     quote:
       "Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.",
-    avatar: "profile-2.jpg",
+    avatar: "/profile-2.jpg",
   },
   {
     id: 3,
@@ -24,40 +24,49 @@ const testimonial = [
     jobTitle: "Founder & CEO, Huddle",
     quote:
       "Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.",
-    avatar: "profile-3.jpg",
+    avatar: "/profile-3.jpg",
   },
 ];
 
 const Testimonials = () => {
   return (
-    <Wrapper className="flex flex-col items-center justify-center gap-6 py-32 md:gap-10 lg:flex-row lg:justify-between">
-      {testimonial.map((item) => (
-        <div
-          key={item.id}
-          className="h-[160px] w-[280px] space-y-4 bg-[#202A3C] p-6 md:h-[200px] md:w-[480px] md:p-10 lg:h-[200px] lg:w-[360px] lg:p-8"
-        >
-          <p className="font-open-sans text-[0.625rem] leading-[180%] font-normal tracking-[0.5px] text-white md:text-sm md:leading-[150%] md:tracking-normal">
-            {item.quote}
-          </p>
-          <div className="flex items-center gap-2">
-            <Image
-              src={item.avatar}
-              alt={item.name}
-              width={24}
-              height={24}
-              className="rounded-full"
-            />
-            <div className="">
-              <h2 className="font-open-sans text-[0.625rem] leading-3 font-bold tracking-[0.5px] text-white">
-                {item.name}
-              </h2>
-              <p className="font-open-sans text-[0.4375rem] leading-2.5 font-normal tracking-[0.5px]">
-                {item.jobTitle}
-              </p>
+    <Wrapper className="py-32">
+      <div className="relative flex flex-col items-center justify-center gap-6 md:gap-10 lg:flex-row">
+        {testimonial.map((item) => (
+          <div
+            key={item.id}
+            className="z-50 h-[160px] w-[280px] space-y-4 bg-[#202A3C] p-6 md:h-[200px] md:w-[480px] md:p-10 lg:h-[200px] lg:w-[360px] lg:p-8"
+          >
+            <p className="font-open-sans text-[0.625rem] leading-[180%] font-normal tracking-[0.5px] text-white md:text-sm md:leading-[150%] md:tracking-normal">
+              {item.quote}
+            </p>
+            <div className="flex items-center gap-2">
+              <Image
+                src={item.avatar}
+                alt={item.name}
+                width={24}
+                height={24}
+                className="rounded-full"
+              />
+              <div className="">
+                <h2 className="font-open-sans text-[0.625rem] leading-3 font-bold tracking-[0.5px] text-white">
+                  {item.name}
+                </h2>
+                <p className="font-open-sans text-[0.4375rem] leading-2.5 font-normal tracking-[0.5px] text-white">
+                  {item.jobTitle}
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+        <Image
+          src="/bg-quotes.png"
+          alt="quotes"
+          width={55}
+          height={45}
+          className="absolute -top-8 left-2 z-0 md:left-24 lg:left-8"
+        />
+      </div>
     </Wrapper>
   );
 };
