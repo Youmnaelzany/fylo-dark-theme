@@ -34,6 +34,7 @@ const SecureLocation = () => {
       <div className="absolute right-0 -bottom-1 left-0 z-0 w-full">
         <picture>
           {/* Desktop Image */}
+
           <source
             media="(min-width: 768px)"
             srcSet="/bg-curvy-desktop.svg"

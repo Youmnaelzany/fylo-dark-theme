@@ -31,7 +31,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         suppressHydrationWarning
-        className={`${raleway.variable} ${openSans.variable} mx-auto max-w-360 antialiased`}
+        className={`${raleway.variable} ${openSans.variable} mx-auto max-w-360 bg-[#181f2b] antialiased`}
       >
         <Header />
         {children}

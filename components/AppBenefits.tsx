@@ -45,7 +45,7 @@ const AppBenefits = () => {
     <Wrapper
       as="section"
       aria-label="App Benefits"
-      className="grid grid-cols-1 items-center justify-center gap-20 bg-[#181f2b] py-32 md:grid-cols-2 md:gap-x-20 md:gap-y-18 lg:gap-y-20"
+      className="grid grid-cols-1 items-center justify-center gap-20 py-32 md:grid-cols-2 md:gap-x-20 md:gap-y-18 lg:gap-y-20"
     >
       {benefits.map((benefit) => (
         <div

@@ -1,6 +1,7 @@
 import AppBenefits from "@/components/AppBenefits";
 import SecureLocation from "@/components/SecureLocation";
 import StayProductive from "@/components/StayProductive";
+import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <SecureLocation />
       <AppBenefits />
       <StayProductive />
+      <Testimonials />
     </main>
   );
 }
